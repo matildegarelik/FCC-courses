@@ -1,0 +1,128 @@
+<head>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@media (min-width: 1000px){
+  nav{
+    display: block;
+    
+  }
+}
+
+#navbar{
+  width: 15vw;
+  position:fixed;
+  left:0px;
+  top: 0px;
+  height: 100%;
+  border-right: solid;
+  font-family: sans-serif;
+}
+
+#navbar header{
+  line-height: 3.5;
+  vertical-align: baseline;
+  text-align: center;
+  margin-bottom: -17px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#navbar ul {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  list-style:none;
+  position: relative;
+  border-top: solid 1px;
+}
+#navbar a{
+  display: block;
+  text-decoration: none;
+  cursor:pointer;
+  padding: 5px;
+  color: gray;
+}
+
+main{
+  padding-left:16vw;
+}
+
+.main-section header{
+  font-family: monospace;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.main-section p, ul{
+  font-family: monospace;
+  font-size: 12px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+</head>
+<main id="main-doc">
+  <h1>Neural networks</h1>
+  <nav id="navbar">
+    <header>Navigation Bar</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction_to_NN">Introduction to NN</a></li>
+    <li><a class="nav-link" href="#Neural_network_layers">Neural network layers</a></li>
+      <li><a class="nav-link" href="#Activation_function">Activation function</a></li>
+      <li><a class="nav-link" href="#Feedforward_neural_networks">Feedforward neural networks</a></li>
+      <li><a class="nav-link" href="#CNN">CNN</a></li>
+    </ul>
+  </nav>
+  <section id="Introduction_to_NN" class="main-section"><header>Introduction to NN</header>
+    <p>Neural networks are set of algorithms inspired by the functioning of human brian. Generally when you open your eyes, what you see is called data and is processed by the Nuerons(data processing cells) in your brain, and recognises what is around you. That’s how similar the Neural Networks works. They takes a large set of data, process the data(draws out the patterns from data), and outputs what it is.</p>
+    <p>Neural networks sometimes called as Artificial Neural networks(ANN’s), because they are not natural like neurons in your brain. They artifically mimic the nature and funtioning of Neural network. ANN’s are composed of a large number of highly interconnected processing elements (neurones) working in unison to solve specific problems.</p>
+    <p>ANNs, like people,like child, they even learn by example. An ANN is configured for a specific application, such as pattern recognition or data classification,Image recognition, voice recognition through a learning process.</p>
+    <p>Neural networks (NN) are universal function approximaters so that means neural networks can learn an approximation of any function f() such that.</p>
+    <code></code>
+  </section>
+  <section id="Neural_network_layers" class="main-section"><header>Neural network layers</header>
+    <p>The commonest type of artificial neural network consists of three groups, or layers, of units: a layer of “input” units is connected to a layer of “hidden” units, which is connected to a layer of “output” units.</p>
+    <ul>
+      <li>Input units:- The activity of the input units represents the raw information that is fed into the network. this also called input layer.</li>
+      <li>Hidden units:- The activity of each hidden unit is determined by the activities of the input units and the weights on the connections between the input and the hidden units. this also called hidden layer.</li>
+      <li>Output units:- The behaviour of the output units depends on the activity of the hidden units and the weights between the hidden and output units. this also called output layer.</li>
+    </ul>
+    <p><img src="https://miro.medium.com/max/500/0*BSxP3AHxBe_IevHC.png"></p>
+  </section>
+  <section id="Activation_function" class="main-section"><header>Activation function</header>
+    <p>The output Y from the neuron is computed as shown in the Figure above. The function f is non-linear and is called the Activation Function. The purpose of the activation function is to introduce non-linearity into the output of a neuron. This is important because most real world data is non linear and we want neurons to learn these non linear representations.</p>
+    <p>Every activation function (or non-linearity) takes a single number and performs a certain fixed mathematical operation on it. There are several activation functions you may encounter in practice:</p>
+    <code></code>
+    <ul>
+      <li>Sigmoid</li>
+      <li>RElu</li>
+      <li>tanh</li>
+      <li>Softmax</li>
+      <li>Maxout</li>
+      <li>Elu</li>
+    </ul>
+    <img src="https://miro.medium.com/max/602/0*CAQoC6lJxfgiGSMV">
+  </section>
+  <section id="Feedforward_neural_networks" class="main-section"><header>Feedforward neural networks</header>
+    <p>This neural network is one of the simplest forms of ANN, where the data or the input travels in one direction. The data passes through the input nodes and exit on the output nodes. This neural network may or may not have the hidden layers. In simple words, it has a front propagated wave and no backpropagation by using a classifying activation function usually.</p>
+    <p>Below is a Single layer feed-forward network. Here, the sum of the products of inputs and weights are calculated and fed to the output. The output is considered if it is above a certain value i.e threshold(usually 0) and the neuron fires with an activated output (usually 1) and if it does not fire, the deactivated value is emitted (usually -1).</p>
+    <p>Application of Feedforward neural networks are found in computer vision and speech recognition where classifying the target classes is complicated. These kind of Neural Networks are responsive to noisy data and easy to maintain. This paper explains the usage of Feed Forward Neural Network. The X-Ray image fusion is a process of overlaying two or more images based on the edges. Here is a visual description.</p>
+    <code></code>
+  </section>
+  <section id="CNN" class="main-section"><header>CNN</header>
+    <p>Convolutional neural networks are similar to feed forward neural networks, where the neurons have learnable weights and biases. Its application has been in signal and image processing which takes over OpenCV in the field of computer vision.</p>
+    <p>Below is a representation of a ConvNet, in this neural network, the input features are taken in batch-wise like a filter. This will help the network to remember the images in parts and can compute the operations. These computations involve the conversion of the image from RGB or HSI scale to the Gray-scale. Once we have this, the changes in the pixel value will help to detect the edges and images can be classified into different categories.</p>
+    <p>ConvNet are applied in techniques like signal processing and image classification techniques. Computer vision techniques are dominated by convolutional neural networks because of their accuracy in image classification. The technique of image analysis and recognition, where the agriculture and weather features are extracted from the open-source satellites like LSAT to predict the future growth and yield of a particular land are being implemented.</p>
+    <code></code>
+  </section>
+</main>

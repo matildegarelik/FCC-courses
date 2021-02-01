@@ -1,0 +1,86 @@
+<head>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<style>
+main{
+  background-color: #E1EAB6;
+}
+
+#welcome-section{
+  height:100vh;
+  margin-top: 40px;
+}
+#navbar{
+  position:fixed;
+  top:0px;
+  background-color: #074650;
+  width: 100%;
+  height: 40px;
+}
+
+#navbar a{
+  text-decoration: none;
+  color:#F0F0F0;
+  font-family: Abel;
+  float: right;
+  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+}
+
+#projects{
+  display: flex;
+  flex-direction:row;
+}
+
+@media (max-width: 1000px){
+  #projects{
+    flex-drection:column;
+  }
+}
+</style>
+
+</head>
+<main>
+  <nav id="navbar">
+    <a href=#contact>Contact</a>
+    <a href=#projects>Work</a>
+    <a href=#welcome-section>Home</a>
+  </nav>
+  <section id="welcome-section">
+    <h1>Hola, soy Matilde</h1>
+  </section>
+  <div class="spinner-grow text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-light" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+  <section id="projects">
+    <div class="project-tile">
+      <a href=#>Project 1</a>
+    </div>
+  </section>
+  <section id="contact">
+    <a id="profile-link" href="https://github.com/matildegarelik" target="_blank">Github</a>
+  </section>
+</main>
